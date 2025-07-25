@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: clamp(0.7rem, 2vw, 1.2rem);
+}
+body {
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  width: unquote("min(90%, 40rem)");
+  border-radius: 1.2rem;
+  overflow: hidden;
+  &__img {
+    width: 50%;
+  }
+  &__img-perfume {
+    width: 100%;
+    display: block;
+  }
+  &__product {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-name {
+      letter-spacing: 0.15rem;
+    }
+    &-description {
+      line-height: 1.5rem;
+    }
+    &-addtocart {
+      display: block;
+    }
+    &-name, &-description{
+      margin: 0;
+      font-family: 'Montserrat';
+      color: hsl(228, 12%, 48%);
+    }
+    &-newprice {
+      font-family: 'Fraunces';
+      color: hsl(158, 36%, 37%);
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    &-prices {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    &-oldprice {
+      text-decoration: line-through;
+      color: hsl(228, 12%, 48%);
+    }
+    &-title {
+      font-family: 'Fraunces';
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    &-addtocart {
+      padding: 1rem 1.2rem;
+      background-color: hsl(158, 36%, 37%);
+      display: flex;
+      color: #fff;
+      justify-content: center;
+      gap: 0.8rem;
+      border-radius: 0.8rem;
+      border: none;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+    &-addtocart:active, &-addtocart:hover {
+      background-color: hsl(158, 42%, 18%);
+    }
+  }
+}
+.attribution { font-size: 1rem; text-align: center; position: absolute; bottom: 0; margin: 1rem 0; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@media all and (max-width: 50rem){
+  .container {
+    flex-direction: column;
+    width: unquote("min(90%, 30rem)");
+    &__product {
+      width: 100%;
+      height: 50%;
+    }
+    &__img {
+      height: 50%;
+      width: 100%;
+    }
+    &__img-perfume {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

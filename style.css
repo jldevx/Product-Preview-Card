@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: clamp(0.7rem, 2vw, 1.2rem);
+}
+
+body {
+  height: 100vh;
+  background-color: #f2ebe3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  background-color: white;
+  width: min(90%, 40rem);
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.container__img {
+  width: 50%;
+}
+
+.container__img-perfume {
+  width: 100%;
+  display: block;
+}
+
+.container__product {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container__product-name {
+  letter-spacing: 0.15rem;
+}
+
+.container__product-description {
+  line-height: 1.5rem;
+}
+
+.container__product-addtocart {
+  display: block;
+}
+
+.container__product-name, .container__product-description {
+  margin: 0;
+  font-family: 'Montserrat';
+  color: #6c7289;
+}
+
+.container__product-newprice {
+  font-family: 'Fraunces';
+  color: #3c8067;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.container__product-prices {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.container__product-oldprice {
+  text-decoration: line-through;
+  color: #6c7289;
+}
+
+.container__product-title {
+  font-family: 'Fraunces';
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.container__product-addtocart {
+  padding: 1rem 1.2rem;
+  background-color: #3c8067;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  gap: 0.8rem;
+  border-radius: 0.8rem;
+  border: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.container__product-addtocart:active, .container__product-addtocart:hover {
+  background-color: #1b4133;
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  margin: 1rem 0;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media all and (max-width: 50rem) {
+  .container {
+    flex-direction: column;
+    width: min(90%, 30rem);
+  }
+  .container__product {
+    width: 100%;
+    height: 50%;
+  }
+  .container__img {
+    height: 50%;
+    width: 100%;
+  }
+  .container__img-perfume {
+    height: 100%;
+    width: 100%;
+  }
+}
