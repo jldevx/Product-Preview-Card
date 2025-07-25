@@ -17,7 +17,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://jldevx.github.io/Product-Preview-Card/](https://jldevx.github.io/Product-Preview-Card/)
 
 ## My process
 
